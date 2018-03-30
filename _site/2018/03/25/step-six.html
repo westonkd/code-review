@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Weston's Code Review Checklist</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#steps').find('.carousel-item').first().addClass('active');
+            $('#steps').carousel({interval: false})
+        })
+
+        function nextStep() {
+            $('#steps').carousel('next');
+        }
+    </script>
+</head>
+
+    <body>
+        <main class="container">
+            <h2>Step Six</h2>
+<p>Does the change query the database? If so make sure the queries are efficient. Be on the lookout for potential n+1 query problems.</p>
+
+<p>Make sure network requests are also handled in an efficient manner. Verify APIs are paginated.</p>
+
+        </main>
+    </body>
+</html>

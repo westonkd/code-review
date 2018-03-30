@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="row">
+    <div class="col-sm-12">
+        <div id="steps" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                {% for post in site.posts %}
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ post.name }}</h5>
+                                {{ post.content }}
+                                <button class="btn btn-primary" onclick="nextStep()">Done</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

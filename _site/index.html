@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Weston's Code Review Checklist</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#steps').find('.carousel-item').first().addClass('active');
+            $('#steps').carousel({interval: false})
+        })
+
+        function nextStep() {
+            $('#steps').carousel('next');
+        }
+    </script>
+</head>
+
+    <body>
+        <main class="container">
+            <div class="row">
+    <div class="col-sm-12">
+        <div id="steps" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Read the Jira Ticket</h5>
+                                <p>Read the Jira ticket. Get a good grasp of the acceptance criteria and read the ticket’s description.</p>
+
+                                <button class="btn btn-primary" onclick="nextStep()">Done</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Checkout the Change</h5>
+                                <p>Checkout the change. See if the new functionality meets the needs outlined in the Jira ticket. Does the change do what it is supposed to do?</p>
+
+                                <button class="btn btn-primary" onclick="nextStep()">Done</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Overall Design</h5>
+                                <p>Is the overall solution maintainable, extendable, scalable, and well-written? Comment on any potential problems, areas that need more abstraction, and places where code style/structure could be improved.</p>
+
+                                <button class="btn btn-primary" onclick="nextStep()">Done</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">A11y</h5>
+                                <p>Does the change touch the front-end? If so run through the UI with a screenreader and keyboard only. Verify content is presented equally for all kinds of users.</p>
+
+                                <button class="btn btn-primary" onclick="nextStep()">Done</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">I18n</h5>
+                                <p>Does the change introduce any new user-facing strings? Make sure they are translated.</p>
+
+                                <button class="btn btn-primary" onclick="nextStep()">Done</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Efficiency</h5>
+                                <p>Does the change query the database? If so make sure the queries are efficient. Be on the lookout for potential n+1 query problems.</p>
+
+<p>Make sure network requests are also handled in an efficient manner. Verify APIs are paginated.</p>
+
+                                <button class="btn btn-primary" onclick="nextStep()">Done</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Documentation</h5>
+                                <p>Verify all changes have been documented when need. This is mostly applicable to APIs. Are comments included where code’s meaning may be difficult to follow? Is spelling and grammar correct in commit message, comments, and documentation?</p>
+
+                                <button class="btn btn-primary" onclick="nextStep()">Done</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Test Coverage</h5>
+                                <p>Does the patch set include sufficient test to exercise the new changes/additions? Make sure JavaScript changes include tests as well.</p>
+
+                                <button class="btn btn-primary" onclick="nextStep()">Done</a>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        </main>
+    </body>
+</html>
